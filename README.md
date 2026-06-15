@@ -24,8 +24,8 @@ python build_site.py
 
 1. **克隆仓库**
    ```bash
-   git clone https://github.com/<你的用户名>/<仓库名>.git
-   cd <仓库名>
+   git clone https://github.com/milesliu2026-ux/FIll-in-Blank.git
+   cd FIll-in-Blank
    ```
 
 2. **改内容**
@@ -47,7 +47,7 @@ python build_site.py
 
 仓库 Settings → Pages → Source 选 **Deploy from branch** → Branch `main`，Folder **`/site`** → Save。
 
-几分钟后访问：`https://<用户名>.github.io/<仓库名>/`
+几分钟后访问：https://milesliu2026-ux.github.io/FIll-in-Blank/
 
 ## 仓库结构
 

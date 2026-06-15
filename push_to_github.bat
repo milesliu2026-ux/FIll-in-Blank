@@ -2,24 +2,22 @@
 setlocal
 cd /d "%~dp0"
 set GIT="C:\Program Files\Git\bin\git.exe"
+set DEFAULT_REMOTE=https://github.com/milesliu2026-ux/FIll-in-Blank.git
 
 echo === Fill In the Blank - push to GitHub ===
+echo 默认仓库: %DEFAULT_REMOTE%
 echo.
 
 %GIT% status -sb
 echo.
-set /p REMOTE=GitHub 仓库地址 (例如 https://github.com/用户名/仓库名.git): 
-if "%REMOTE%"=="" (
-  echo 未输入地址，已取消。
-  pause
-  exit /b 1
-)
+set /p REMOTE=GitHub 仓库地址 (直接回车使用默认): 
+if "%REMOTE%"=="" set REMOTE=%DEFAULT_REMOTE%
 
 %GIT% remote remove origin 2>nul
 %GIT% remote add origin %REMOTE%
 %GIT% branch -M main
 echo.
-echo 正在推送 main 分支（首次可能较慢，资源约 500MB+）...
+echo 正在推送 main 分支（首次可能较慢，资源约 270MB+）...
 %GIT% push -u origin main
 echo.
 if errorlevel 1 (
