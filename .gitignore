@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.Python
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+Desktop.ini
+
+# Local temp scripts (not part of deliverable)
+_fetch_ref.py
+_fetch_ref2.py
+_fetch_ref3.py
+ref_snippet.txt
+pdf_scan.txt
+
+# Logs
+*.log
