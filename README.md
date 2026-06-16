@@ -43,11 +43,14 @@ python build_site.py
 
 4. **合并**：在 GitHub 上开 Pull Request，或由管理员合并到 `main`。
 
-## 在线演示（GitHub Pages，可选）
+## 在线演示（GitHub Pages）
 
-仓库 Settings → Pages → Source 选 **Deploy from branch** → Branch `main`，Folder **`/site`** → Save。
+GitHub 的「从分支部署」**只能选根目录 `/` 或 `/docs`**，没有 `/site` 选项。本仓库已配置 Actions，从 `site/` 自动发布。
 
-几分钟后访问：https://milesliu2026-ux.github.io/FIll-in-Blank/
+1. 仓库 **Settings** → **Pages**
+2. **Build and deployment** → Source 选 **GitHub Actions**（不要选 Deploy from a branch）
+3. 推送 `main` 后，在 **Actions** 页查看 `Deploy site to GitHub Pages` 是否成功
+4. 访问：https://milesliu2026-ux.github.io/FIll-in-Blank/
 
 ## 仓库结构
 
