@@ -45,12 +45,22 @@ python build_site.py
 
 ## 在线演示（GitHub Pages）
 
-GitHub 的「从分支部署」**只能选根目录 `/` 或 `/docs`**，没有 `/site` 选项。本仓库已配置 Actions，从 `site/` 自动发布。
+**推荐地址（Actions 部署，根路径即网站）：**  
+https://milesliu2026-ux.github.io/FIll-in-Blank/
+
+### 方式 A：GitHub Actions（推荐，URL 最干净）
 
 1. 仓库 **Settings** → **Pages**
-2. **Build and deployment** → Source 选 **GitHub Actions**（不要选 Deploy from a branch）
-3. 推送 `main` 后，在 **Actions** 页查看 `Deploy site to GitHub Pages` 是否成功
-4. 访问：https://milesliu2026-ux.github.io/FIll-in-Blank/
+2. **Source** 选 **GitHub Actions**
+3. 推送 `main` 后，在 **Actions** 查看 `Deploy site to GitHub Pages` 是否成功
+
+### 方式 B：从分支部署（若 Actions 未启用）
+
+1. **Settings** → **Pages** → Source 选 **Deploy from a branch**
+2. Branch：`main`，Folder：**`/ (root)`**
+3. 根目录 `index.html` 会自动跳转到 `site/index.html`
+
+> 分支模式**没有** `/site` 选项；若只选根目录且没有 `index.html`，会显示 README。
 
 ## 仓库结构
 
